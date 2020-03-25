@@ -25,6 +25,7 @@ decode_path: str = "{}{}".format(ROOT_PATH, "exp/chain/tdnn_1a_sp/decode_test_ow
 decode_name: str = "run_decode_test_for_game.sh"
 point_wav_file: str = "BAC009S0724W0121.wav"
 command_str: str = "{}{}{}".format('sed -n "/^BAC009S0724W0121\|^$/ p" ', decode_path, 'decode.1.log')
+print(command_str)
 socket = socket(AF_INET, SOCK_STREAM)
 socket.bind((address, port))
 socket.listen(5)

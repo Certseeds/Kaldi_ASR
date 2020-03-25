@@ -45,7 +45,7 @@ for data in $test_sets; do
       data/${data}_hires_nopitch exp/nnet3${nnet3_affix}/extractor \
       exp/nnet3${nnet3_affix}/ivectors_${data}
 done
-
+# test_set = "test_own"
 graph_dir=$dir/graph
 for test_set in $test_sets; do
     steps/nnet3/decode_own.sh --acwt 1.0 --post-decode-acwt 10.0 \
